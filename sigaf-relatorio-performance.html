@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Teste de Performance - JMeter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin: 30px 0 20px 0;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #34495e;
+            margin: 20px 0 15px 0;
+            font-size: 1.4em;
+        }
+
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .config-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .config-label {
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .config-value {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .metrics-table th {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .metrics-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .metrics-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .metrics-table tr:hover {
+            background-color: #e8f4f8;
+        }
+
+        .metric-value {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .status-good {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .status-warning {
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .status-error {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .error-list {
+            background: #fdf2f2;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .error-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f5c6cb;
+        }
+
+        .error-item:last-child {
+            border-bottom: none;
+        }
+
+        .error-type {
+            font-weight: bold;
+            color: #721c24;
+        }
+
+        .error-count {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .conclusion {
+            background: #e8f5e8;
+            border: 1px solid #c3e6c3;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .conclusion h3 {
+            color: #155724;
+            margin-bottom: 15px;
+        }
+
+        .conclusion p {
+            color: #155724;
+            line-height: 1.8;
+        }
+
+        .chart-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            color: #6c757d;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .timestamp {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .config-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Relatório de Teste de Performance-Jmeter</h1>
+            <div class="subtitle">SIGAF</div>
+        </div>
+
+        <div class="content">
+            <h2> Configuração do Teste</h2>
+            <ul>
+                <li><strong>Data do Teste:</strong> 18/07/2025</li>
+                <li><strong>URL Testada:</strong> https://backend-sigaf.onrender.com/api/v1/enrollments</li>
+                <li><strong>Usuários Virtuais:</strong> 80</li>
+                <li><strong>Duração:</strong> 3 minutos</li>
+            </ul>
+
+            <h2> Resumo dos Resultados</h2>
+            <table class="metrics-table">
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total de Requisições</td>
+                        <td class="metric-value" id="total-requests">11.550</td>
+                    </tr>
+                    <tr>
+                        <td>Tempo Médio de Resposta</td>
+                        <td class="metric-value" id="avg-response-time">27.215 ms</td>
+                    </tr>
+                    <tr>
+                        <td>Tempo Máximo de Resposta</td>
+                        <td class="metric-value" id="max-response-time">70.885 ms</td>
+                    </tr>
+                    <tr>
+                        <td>Tempo Mínimo de Resposta</td>
+                        <td class="metric-value" id="min-response-time">325 ms</td>
+                    </tr>
+                    <tr>
+                        <td>Taxa de Erro (%)</td>
+                        <td class="metric-value" id="error-rate">17.15% (1981 erros)</td>
+                    </tr>
+                    <tr>
+                        <td>Throughput (reqs/seg)</td>
+                        <td class="metric-value" id="throughput">1.68</td>
+                    </tr>
+                    <tr>
+                        <td>Desvio Padrão</td>
+                        <td class="metric-value" id="std-deviation">12.216 ms</td>
+                    </tr>
+                    <tr>
+                        <td>Percentil 90</td>
+                        <td class="metric-value" id="percentil-90">44152.70 ms</td>
+                    </tr>
+                    <tr>
+                        <td>Percentil 95</td>
+                        <td class="metric-value" id="percentil-95">47306.00 ms</td>
+                    </tr>
+                    <tr>
+                        <td>Percentil 99</td>
+                        <td class="metric-value" id="percentil-99">57131.70 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2> Análise de Erros</h2>
+            <div class="error-list" id="error-analysis">
+                <div class="error-item">
+                    <span class="error-type">500 Internal Server Error</span>
+                    <span class="error-count" id="error-500">1396</span>
+                </div>
+                <div class="error-item">
+                    <span class="error-type">400</span>
+                    <span class="error-count" id="">565</span>
+                </div>
+                <div class="error-item">
+                    <span class="error-type">520</span>
+                    <span class="error-count" id="">2</span>
+                </div>
+                <div class="error-item">
+                    <span class="error-type">Timeouts</span>
+                    <span class="error-count" id="error-timeout">18</span>
+                </div>
+            </div>
+
+            <h2> Conclusões e Recomendações</h2>
+            <div class="conclusion">
+                <h3>Análise Geral</h3>
+                <p id="conclusion-text">
+                    O sistema suportou 11.550 requisições em 3 minutos com 80 usuários, com tempos de resposta aceitável para APIs com processamento de arquivos.
+                    Os erros 400 demonstram que o endpoint não validou dados repetidos(identificationNumber e phoneNumber)  
+                    A taxa de erro de 17,15% é alta e compromete a confiabilidade.Reduzir Erros 500 (Internal Server Error, Lidar com Timeouts e Erros de Conexão
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
