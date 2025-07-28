@@ -1,0 +1,537 @@
+[
+  {
+    "v": 8,
+    "name": "Ciclo Académico",
+    "folders": [],
+    "requests": [
+      {
+        "v": "14",
+        "name": "POST Novo ciclo ",
+        "method": "POST",
+        "endpoint": "https://service-development.onrender.com/api/v1/academic-years",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsb3VyZW5jYSIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzUxNjM1MDg3LCJleHAiOjE3NTE3MjE0ODd9.GbBgLwnGJugI2Ycd1oOTkPsWd1RG4WRb6Q5HLos0uI0gMd-vEBNi8tUOMSSqUEcrVWU2p6E0eU2tQ_iwNNPxxQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{ \"name\":\"Ano Académico 2028/2029\",\n  \"Description \":\"ciclo letivo II\",\n  \"code\":\"AA08\",\n  \"startDate\":\"2028-09-02\",\n  \"endDate\":\"2029-10-02\",\n  \"status\":\"OPEN\" }"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "GET Listar todos os ciclos",
+        "method": "GET",
+        "endpoint": "https://service-development.onrender.com/api/v1/academic-years",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUzMjc5OTAyLCJpYXQiOjE3NTMyNzYzMDIsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.vVQFF1cxpXH9v6X_KzF_0o2yo-l9k0_rlFpWN2hzMRHiogWYHp7yv0zdXk2uAv0k_JE87legT_9TXfTXP5nrUo1z_qUkfXMFmgSiIyhdm1bgkBlv3Q8-9jEoygr7VWWMyocHbNO2Jr4esNkv_AZuHi3yOUioraq8J8Yo8QFzvuiDKi2aZ0obhMpGBJnpIGg3lxG7oHvZj68aOYqxyUyut6ee1HKKWpkcHsqhVjNOceAUFEqp-fZPo5lo5vFW0zAobzHKfVMih-5UnsowOcvc1ZyIGk0QT-hOtjkwKamt50ojI6-aZKdoYXj7qxjRjkVPlwdPqQhS33BlWz7E6Uf2Vg",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "Listar Ciclos Abertos",
+        "method": "GET",
+        "endpoint": "https://echo.hoppscotch.io",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "Edit",
+        "method": "GET",
+        "endpoint": "https://echo.hoppscotch.io",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    },
+    "headers": [],
+    "_ref_id": "coll_mcl1ur8r_3ac0fba2-42bb-4a9c-a6c6-9a0f04096ebd"
+  },
+  {
+    "v": 8,
+    "name": "Enrollment",
+    "folders": [],
+    "requests": [
+      {
+        "v": "14",
+        "name": "POST Nova Inscrição",
+        "method": "POST",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/enrollments",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUyMDQ0MTIxLCJpYXQiOjE3NTIwNDA1MjEsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.cNiP-6EKSBXvpMcQCntg3hKtO6H985xYRtAcX8JSdzi_myW_cSeqshlmTfSknFReNKtlhnFcnrP1IALePP3X9MmWSx8U0rR6995xhH1bB-juvdceZsVne-pabaJUtR_Yam_71GdwaPEL2cnjH2pT1ulZ3ONDHnLBZCBEEOw-uHPs-Ov7zQ_v__VGUUxlK4psWB7grEuKfB4BYcbkW79Tbo-1oABmqKbq_7c_nJkPBSzk1yGuByz6QxSwUsauBv3K0KXPwnMRuXcznmo4Lzn1C646Qxsi23OJrA7oSU9uwMzV4z8cE3ZOpFUG1XFBYplmbrUhb95QaDga_9r1E4AuUg",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"applicantName\": \"Lourenca Maria\",\n  \"identificationNumber\": \"006306663LA047\",\n  \"identificationType\": \"BI\",\n  \"targetSchoolId\": \"d18eaba3-ce60-41c4-95bb-dd3e4e0633ae\",\n  \"targetCourseId\": \"ba64fd10-0604-49b3-b3bb-74a30aef6ba8\",\n  \"phoneNumber\": \"945768490\",\n  \"birthDate\": \"2000-09-09\",\n  \"fullAddress\": \"Rua 6, golf2\",\n  \"email\": \"lourenca@gmail.com\",\n  \"guardianName\": \"armanho\",\n  \"guardianPhoneNumber\": \"945678901\",\n  \"identificationDocumentURI\": \"https://example.com/docs/bi_lourenca.pdf\",\n  \"academicCertificateURI\": \"https://example.com/docs/certificado_12classe.pdf\",\n  \"medicalCertificateURI\": \"https://example.com/docs/atestado_medico.pdf\",\n  \"photoURI\": \"https://example.com/photos/lourenca.jpg\",\n  \"referenceCode\": \"ENR-20250709-00123\",\n  \"paymentReference\": \"MBP-003456789012\",\n   \"documentsComplete\": true,\n  \"paymentComplete\": true,\n  \"statusMessage\": \"Inscrição concluída com sucesso\"\n\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "GET Listar Inscrições por escola",
+        "method": "GET",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/enrollments/schools/cf1d7069-5f3d-42f2-a229-c00c8ef187b4",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUxOTk1NjA5LCJpYXQiOjE3NTE5OTIwMDksInNjb3BlIjoiUk9MRV9BRE1JTiJ9.P9UA_G5C9hNtBhjHApoCtb1Kbgeu5bCvsXuXTOKge6u7xpMcsp9G5741BDWFkmgD3mwD5DjvB_oIfIfARvYRWK8J-VNLc7bgfC0vUfVQU4MylzjV7187_f2GyEGH6tvaEvGAkTYiHd4kc5GH4_OTzsRj9DkSlK0LT9y3pFyIZ1_1k3oXXntsbxnA8HIEn5uyUQGycdBm98WjBIq6uuBao1eup3FMDSK_5I67zY5GEK0e8bhY21Zbhy509KBPexLhawPp-nv3MtExfE5NjzjdeujfaMguSaZzSoCNk72ovQ9w8Qo2hGhU7qzrFPO0_Gxvz4DxodM4UBE49FJhE8pd8A",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    },
+    "headers": [],
+    "_ref_id": "coll_mcmrhyvu_31bc9da2-ca9a-4969-adb7-e55d332ac70f"
+  },
+  {
+    "v": 8,
+    "name": "Gestao de alunos",
+    "folders": [],
+    "requests": [
+      {
+        "v": "14",
+        "name": "POST Auth",
+        "method": "POST",
+        "endpoint": "https://service-development.onrender.com/api/v1/auth/signin",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{ \"username\": \"lourenca\", \"password\": \"123456\" }"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "POST novo aluno",
+        "method": "POST",
+        "endpoint": "https://service-development.onrender.com/api/v1/students",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUxOTk1NjA5LCJpYXQiOjE3NTE5OTIwMDksInNjb3BlIjoiUk9MRV9BRE1JTiJ9.P9UA_G5C9hNtBhjHApoCtb1Kbgeu5bCvsXuXTOKge6u7xpMcsp9G5741BDWFkmgD3mwD5DjvB_oIfIfARvYRWK8J-VNLc7bgfC0vUfVQU4MylzjV7187_f2GyEGH6tvaEvGAkTYiHd4kc5GH4_OTzsRj9DkSlK0LT9y3pFyIZ1_1k3oXXntsbxnA8HIEn5uyUQGycdBm98WjBIq6uuBao1eup3FMDSK_5I67zY5GEK0e8bhY21Zbhy509KBPexLhawPp-nv3MtExfE5NjzjdeujfaMguSaZzSoCNk72ovQ9w8Qo2hGhU7qzrFPO0_Gxvz4DxodM4UBE49FJhE8pd8A",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{ \"firstName\": \"lourenca\", \n  \"lastName\": \"Cazanga\",\n  \"email\": \"lourenca@gmail.com\", \n  \"phoneNumber\": \"123456789\",\n  \"address\": \"uige\" }"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "GET Listar alunos",
+        "method": "GET",
+        "endpoint": "https://service-development.onrender.com/api/v1/students",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUxOTk1NjA5LCJpYXQiOjE3NTE5OTIwMDksInNjb3BlIjoiUk9MRV9BRE1JTiJ9.P9UA_G5C9hNtBhjHApoCtb1Kbgeu5bCvsXuXTOKge6u7xpMcsp9G5741BDWFkmgD3mwD5DjvB_oIfIfARvYRWK8J-VNLc7bgfC0vUfVQU4MylzjV7187_f2GyEGH6tvaEvGAkTYiHd4kc5GH4_OTzsRj9DkSlK0LT9y3pFyIZ1_1k3oXXntsbxnA8HIEn5uyUQGycdBm98WjBIq6uuBao1eup3FMDSK_5I67zY5GEK0e8bhY21Zbhy509KBPexLhawPp-nv3MtExfE5NjzjdeujfaMguSaZzSoCNk72ovQ9w8Qo2hGhU7qzrFPO0_Gxvz4DxodM4UBE49FJhE8pd8A",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "GET Buscar por ID",
+        "method": "GET",
+        "endpoint": "https://service-development.onrender.com/api/v1/students/5ce6427b-4eb5-444d-b91f-6d07704eeae9",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUxOTk1NjA5LCJpYXQiOjE3NTE5OTIwMDksInNjb3BlIjoiUk9MRV9BRE1JTiJ9.P9UA_G5C9hNtBhjHApoCtb1Kbgeu5bCvsXuXTOKge6u7xpMcsp9G5741BDWFkmgD3mwD5DjvB_oIfIfARvYRWK8J-VNLc7bgfC0vUfVQU4MylzjV7187_f2GyEGH6tvaEvGAkTYiHd4kc5GH4_OTzsRj9DkSlK0LT9y3pFyIZ1_1k3oXXntsbxnA8HIEn5uyUQGycdBm98WjBIq6uuBao1eup3FMDSK_5I67zY5GEK0e8bhY21Zbhy509KBPexLhawPp-nv3MtExfE5NjzjdeujfaMguSaZzSoCNk72ovQ9w8Qo2hGhU7qzrFPO0_Gxvz4DxodM4UBE49FJhE8pd8A",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "PUT Atualizar",
+        "method": "PUT",
+        "endpoint": "https://service-development.onrender.com/api/v1/students",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsb3VyZW5jYSIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzUxNzI0MjY1LCJleHAiOjE3NTE4MTA2NjV9.Rag0Jjl31QAKe905qexcogmtCAwbNpWf_4rrDVlNi81xRwzJDWbd0M2_BBu4DRWArQqIFTg6yLWqpIdGJsD7Lg",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n    \"firstName\": \"lourenca\",\n    \"lastName\": \"Cazanga\",\n    \"email\": \"lourenca@gmail.com\",\n    \"phoneNumber\": \"9\",\n    \"address\": \"uige\"\n   \n  }"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "DELETE ",
+        "method": "DELETE",
+        "endpoint": "https://service-development.onrender.com/api/v1/students/374a56a5-4249-4a36-b930-9a61f1bbd95f",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsb3VyZW5jYSIsInRva2VuVmVyc2lvbiI6MCwiaWF0IjoxNzUxNzI0MjY1LCJleHAiOjE3NTE4MTA2NjV9.Rag0Jjl31QAKe905qexcogmtCAwbNpWf_4rrDVlNi81xRwzJDWbd0M2_BBu4DRWArQqIFTg6yLWqpIdGJsD7Lg",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n    \"firstName\": \"lourenca\",\n    \"lastName\": \"Cazanga\",\n    \"email\": \"lourenca@gmail.com\",\n    \"phoneNumber\": null,\n    \"address\": \"uige\"\n  }"
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authActive": true,
+      "authType": "none"
+    },
+    "headers": [],
+    "_ref_id": "coll_mcmv93lx_f0b5f32d-79e7-4988-b52b-d496a209288a"
+  },
+  {
+    "v": 8,
+    "name": "Auth",
+    "folders": [],
+    "requests": [
+      {
+        "v": "14",
+        "name": "Login",
+        "method": "POST",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/auth/login",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{ \n  \"username\": \"admin@sigaf.com\", \n  \"password\": \"user\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "Logout",
+        "method": "POST",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/auth/logout",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUxODczNDU2LCJpYXQiOjE3NTE4Njk4NTYsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.dDw8frx3ntp6e_TReAo-O206oKDfpYc0L4_cxFKzxOpprwDiV13671ucCAeqnTyOUNJr_YA0iRkKy7tqepaViS0PPXnEzwYkEe5_ADvmivhOkKgGFVw9VaMTamFw-x4-SPlOQXgXjFIKJdBgpmXIaz__SPjRf8RrP3p8PXiCVbrfLe9DwcDaOSv_Lb9U_sZmw-wU6Oo3RILveQUBQ8YOEgUdQ3WXVqEgGDIA-6-ph6W1zpf2lV07mk7gwPc7oZ1SDG1-nS0X20bJz50jSiqJHZhUAaq4Xsu121CSoKnFPMdA2Zw8f1dEzbtnRzKlCijNOfgU38lzTHf_6WKFV6cYKQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "Credenciais inválidas",
+        "method": "POST",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1//auth/login",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{ \n  \"username\": \"lourenca\", \n  \"password\": \"password1234\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "Me",
+        "method": "POST",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/auth/me",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibWFyY29zLm11dGVrYUBpdHNsLmdvdi5hbyIsImV4cCI6MTc1MzUxMjE1MSwiaWF0IjoxNzUzNTA4NTUxLCJzY29wZSI6IlJPTEVfQURNSU4ifQ.xYGJhyQhEelUbePuG9CvwDV0dkvx-tMcklngQPWaaEngD29M2yA_yMKWZe6S2jNGTbC8apMupzYfzR4K82I7-TPLNnR6f7lgbrAb6QsNspYiY7FAbu_wcT97bxMo6kU_56sYOLZd1sJaLdLs5UZd1sPz0pPTOX9NMitJC9sWFRlsUlNLqBnXWoI4LAhxRRZi2FZV7NmUyznfE5E8ePpdFqTydmi_AIGksF4SCqqHZaZgKSlsS4Yj8lq9WSZG5-e_GpvPgpZFjFSfespEqcwkqmyGbjcNcp1Ap_azxEVILBdY7Wt4sTVfu9L13rbCJ1XLqjnvcs9taTF3gEjYe4Lygg",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "\n  {\n  \"username\": \"lourenca\",\n  \"password\": \"123456\",\n  \"email\": \"lourenca@gmail.com\",\n  \"identity\": \"user\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    },
+    "headers": [],
+    "_ref_id": "coll_mcrw1j8d_df381bac-da19-4ac9-b80a-cf33fb695f06"
+  },
+  {
+    "v": 8,
+    "name": "Cursos",
+    "folders": [],
+    "requests": [
+      {
+        "v": "14",
+        "name": "Novo curso",
+        "method": "POST",
+        "endpoint": "https://backend-sigaf.onrender.com/courses",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUxODI1MTM1LCJpYXQiOjE3NTE4MjE1MzUsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.ZUMOacusedG9qT62HO5eOmoEgxECqzGFlWQ18XiAldPqeTMYHRwXwERtO3pbOs9tQirfnJNDmw0KhK3bEVE6ofb0NbRMOWLpGD_UTgYLfzcj4llbKJXP7xryCWtf6Ib4-wJ99GPun3bDkFW7LK8Gwtsihr1N628g0LAoxQiuVJNNsxxn3t0tN9L4Pj2-dP5woK13OZNmPWBp-uMMrxf-x5pWZo84w-7FVJj0UFfJHA7cmZgMuevg-j4oJGkmPu3bHBOD1A-gevjCmBTlcijCgxsq4joYqHGmzTUQgPMg7yqKl9oJ5wzf9cSAVcyCAOkwzLHGpTKKt0AaIExG7RVZUQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"name\":\"Odontologia\",\n  \"code\":\"Odo-001\",\n  \"description\":\"Curso de Odontologia\",\n  \"duration\":72,\n  \"level\":\"HIGHER\"}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "Listar cursos",
+        "method": "GET",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/courses/all",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUxOTk1NjA5LCJpYXQiOjE3NTE5OTIwMDksInNjb3BlIjoiUk9MRV9BRE1JTiJ9.P9UA_G5C9hNtBhjHApoCtb1Kbgeu5bCvsXuXTOKge6u7xpMcsp9G5741BDWFkmgD3mwD5DjvB_oIfIfARvYRWK8J-VNLc7bgfC0vUfVQU4MylzjV7187_f2GyEGH6tvaEvGAkTYiHd4kc5GH4_OTzsRj9DkSlK0LT9y3pFyIZ1_1k3oXXntsbxnA8HIEn5uyUQGycdBm98WjBIq6uuBao1eup3FMDSK_5I67zY5GEK0e8bhY21Zbhy509KBPexLhawPp-nv3MtExfE5NjzjdeujfaMguSaZzSoCNk72ovQ9w8Qo2hGhU7qzrFPO0_Gxvz4DxodM4UBE49FJhE8pd8A",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    },
+    "headers": [],
+    "_ref_id": "coll_mcry75mt_bd099f1b-829d-4f70-bd03-7fa2caa41495"
+  },
+  {
+    "v": 8,
+    "name": "Escolas",
+    "folders": [],
+    "requests": [
+      {
+        "v": "14",
+        "name": "Listar Escolas",
+        "method": "GET",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/schools/all",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUzMjc5OTAyLCJpYXQiOjE3NTMyNzYzMDIsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.vVQFF1cxpXH9v6X_KzF_0o2yo-l9k0_rlFpWN2hzMRHiogWYHp7yv0zdXk2uAv0k_JE87legT_9TXfTXP5nrUo1z_qUkfXMFmgSiIyhdm1bgkBlv3Q8-9jEoygr7VWWMyocHbNO2Jr4esNkv_AZuHi3yOUioraq8J8Yo8QFzvuiDKi2aZ0obhMpGBJnpIGg3lxG7oHvZj68aOYqxyUyut6ee1HKKWpkcHsqhVjNOceAUFEqp-fZPo5lo5vFW0zAobzHKfVMih-5UnsowOcvc1ZyIGk0QT-hOtjkwKamt50ojI6-aZKdoYXj7qxjRjkVPlwdPqQhS33BlWz7E6Uf2Vg",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "One School",
+        "method": "GET",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/schools/d18eaba3-ce60-41c4-95bb-dd3e4e0633ae",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiYWRtaW5Ac2lnYWYuY29tIiwiZXhwIjoxNzUyMDA0MDE3LCJpYXQiOjE3NTIwMDA0MTcsInNjb3BlIjoiUk9MRV9BRE1JTiJ9.AZfBH0YdYSWjyYnUX6U_iE70SUw65ARfBTKgmBlJoOuUfqLQFlmdDhks1Gb0ODemzrKkdej3YbcfavwN_FFSTX_QB61j_j0kOWlfZDAef3A0Qxfll8ok4nmpRHyogo99fW7Ki8KSjb3oNVlJ3vKkVCr9xxfFHFfi95q1SXZYArWGGGm-f9UNxUEJid8s14Q-MVO7X-6FbqDXnFEA4lESxUETkaXUu8K3LlwzH5e_vMSmw6vAkP5h0qmDO_UPO9bHDfQBqqxY4k2PY8J1WN_3j8LyKEJtN-XXeFBWyIa19JoIEuV_NBIKrt4Ar19Pjw5cpLSzYrIfe2DZDUph75MBNQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "Manager School",
+        "method": "POST",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/schools/d18eaba3-ce60-41c4-95bb-dd3e4e0633ae/managers/6fef3f7b-0e28-4fd6-b35b-da5979713062",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibWFyY29zLm11dGVrYUBpdHNsLmdvdi5hbyIsImV4cCI6MTc1MzUxMjE1MSwiaWF0IjoxNzUzNTA4NTUxLCJzY29wZSI6IlJPTEVfQURNSU4ifQ.xYGJhyQhEelUbePuG9CvwDV0dkvx-tMcklngQPWaaEngD29M2yA_yMKWZe6S2jNGTbC8apMupzYfzR4K82I7-TPLNnR6f7lgbrAb6QsNspYiY7FAbu_wcT97bxMo6kU_56sYOLZd1sJaLdLs5UZd1sPz0pPTOX9NMitJC9sWFRlsUlNLqBnXWoI4LAhxRRZi2FZV7NmUyznfE5E8ePpdFqTydmi_AIGksF4SCqqHZaZgKSlsS4Yj8lq9WSZG5-e_GpvPgpZFjFSfespEqcwkqmyGbjcNcp1Ap_azxEVILBdY7Wt4sTVfu9L13rbCJ1XLqjnvcs9taTF3gEjYe4Lygg",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "14",
+        "name": "Cadastrar escola",
+        "method": "PUT",
+        "endpoint": "https://backend-sigaf.onrender.com/api/v1/schools/60e045d6-e5a0-4156-81dc-9ce5602f0d6a",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoibWFyY29zLm11dGVrYUBpdHNsLmdvdi5hbyIsImV4cCI6MTc1MzUxODg3OCwiaWF0IjoxNzUzNTE1Mjc4LCJzY29wZSI6IlJPTEVfQURNSU4ifQ.lVXHZaqK5ZXVU__2so7hZfwMLoNcSxOnLp0i5ozvw0AltCx3vJT1m8_JrOx5laY0HQSHr5ntvNE-uZQyttTgTPfpbfOJlZgH3WxSWcTTYoV0RRrGz_ykpM_4mqQLKXC1A1O9s7_8YX6HgWlvHyVIrC_Y1huB_t2yrgIS77y9J8BDqJutl7q4qLylveIf4hUdGVjPmElHuGF6RLmM0BATx9iPl08egEtcxy-SJXIcWsr-Lhlpr7nS-g-cx6JM43q1G6bjhQ_SCcuJ2LAMkshuygnVLO_pvao5BUFE6idIJSjiMJHJXJxYFDhg0GAQqPY-bmws82WQXrQe5m7wZoUFGQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"name\": \"Instituto Técnico de Saúde do Viana\",\n  \"nif\": \"609500777\",\n  \"responsibleUser\":\"6fef3f7b-0e28-4fd6-b35b-da5979713062\",\n  \"status\": \"active\",\n  \"license\": \"MINSA/ITSL/2023/005\",\n  \"numberOfClassrooms\": 12,\n  \"numberOfLaboratories\": 3,\n  \"institutionCreationDate\": \"2010-03-15\",\n  \"latitude\": \"-8.838333\",\n  \"longitude\": \"13.234444\",\n  \"address\": \"Viana, Vila de Viana\",\n  \"city\": \"Luanda\",\n  \"province\": \"Luanda\",\n  \"phoneNumber\": \"+244999222666\",\n  \"email\": \"secretaria@institutodeviana.ao\",\n  \"website\": \"www.itsl.gov.ao\",\n  \"fax\": \"+244212323434\",\n  \"schoolType\": \"PUBLIC\",\n  \"schoolLevel\": \"BRANCH\",\n  \"managerIds\": [\n    \"6fef3f7b-0e28-4fd6-b35b-da5979713062\"\n  ],\n  \"courseIds\": [\n    \"c70ee56c-6187-49a8-90bd-3c1ee1100b8c\"\n  ],\n  \"logo\": \"https://example.com/logo-itsl.png\",\n  \"licenseURI\": \"https://example.com/licenca-itsl.pdf\"\n}\n"
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    },
+    "headers": [],
+    "_ref_id": "coll_mcrz0scm_ee446922-c07c-4e0a-abbf-c4e22dd9615d"
+  }
+]
